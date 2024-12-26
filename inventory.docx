@@ -1,0 +1,56 @@
+Simple Software Requirements Specification (SRS) for Inventory Management System (IMS)
+
+1. Introduction
+The Inventory Management System (IMS) is a console-based application built in C that helps store managers track and manage inventory. It allows users to add, view, search, update, and delete items, as well as calculate the total value of the inventory.
+
+2. scope
+This system is designed to make it easy for store managers to organize and manage items, ensuring they can easily track the stock, update prices, and calculate inventory value.
+
+3. Functional Requirements
+1.	Add Items:
+Users can add new items with unique IDs, names, quantities, and prices. If the inventory is full, no more items can be added.
+2.	View Inventory:
+The system displays a list of all items, showing ID, name, quantity, and price. If no items exist, it shows a message that the inventory is empty.
+3.	Search Items:
+Users can search for an item by its ID. The system will show the item’s details if found, or an error message if not.
+4.	Update Items:
+Users can update an item’s name, quantity, and price by searching for it by its ID.
+5.	Delete Items:
+Users can remove an item by its ID. After deletion, the system adjusts to prevent empty gaps in the inventory list.
+6.	Calculate Total Inventory Value:
+The system calculates and displays the total value of all items in stock (Quantity × Price).
+7.	Menu System:
+A simple menu allows users to choose actions like adding, viewing, searching, updating, or deleting items, and exiting the program.
+8.	Input Validation:
+The system ensures that all inputs are valid (e.g., positive numbers for quantity and price). It shows error messages for invalid inputs.
+
+
+
+4. Non Functional Requirements
+1.	Performance:
+The system should be fast and handle up to a maximum number of items efficiently.
+2.	Usability:
+The interface should be simple and easy to use, with clear instructions and error messages.
+3.	Reliability:
+The system should work without crashes and handle errors gracefully.
+4.	Security:
+Basic validation should ensure only valid data is entered (e.g., no negative numbers for quantity).
+5.	Portability:
+The system should run on any operating system that supports a C compiler (Windows, Linux, macOS).
+6.	Scalability:
+The system should be able to handle more items in the future by using efficient data storage methods.
+7.	Maintainability:
+The system’s code should be easy to update or fix if needed.
+
+
+5. System Design
+The system will:
+•	Use a structure to store item details like ID, name, quantity, and price.
+•	Provide functions to add, view, update, search, delete, and calculate inventory values.
+•	Display a text-based menu for easy navigation.
+
+
+6. Assumptions
+•	The system is for single-user use in a console environment.
+•	Future updates may allow the system to save data to a file or database for persistence.
+
